@@ -1,0 +1,36 @@
+<%- include('./includes/header.ejs') %> 
+<h1>Add Shoe Form</h1>
+<form action="/add" method="POST">
+    <div class="mb-3">
+      <input type="hidden" name="id" value=<%= id %> >
+      <label for="exampleInputEmail1" class="form-label">Shoe Name</label><br>
+      <input type="text" name="name"class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon2">
+      
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Shoe Price</label><br>
+      <input type="number" class="form-control" id="exampleInputPassword1" name="price"><br>
+
+      <label for="add" class="form-label">Stock on Hand</label><br>
+      <input type="number" class="form-control" id="add" name="stock">
+    </div>
+    <div class="mb-3">
+        <label>Photo</label><br>
+        <input type="text" name="photo">
+    </div>
+    <div class="mb-3">
+        <label>Shoe size</label><br>
+        <input type="text" name="size">
+    </div>
+    <div class="mb-3 form-check">
+      <label class="form-check-label" for="exampleCheck1">Shoe Category</label><br>
+      <select name="category">
+          <option>--please select one</option>
+          <option value="1">Men</option>
+          <option value="2">Women</option>
+          <option value="3">Kid</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+<%- include('./includes/footer.ejs') %> 
