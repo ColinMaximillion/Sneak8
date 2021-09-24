@@ -15,7 +15,7 @@ class Controller {
       // console.log(req.session);
       res.render('home', {data: data, session: user})
     })
-    .catch(err => console.log(err))
+    .catch(err => res.send(err))
   }
   static orderBy(req,res){
     let text = req.query.by
@@ -95,7 +95,7 @@ class Controller {
       
       res.render('performance', {cha: cha})
     })
-    .catch(err => console.log(err))
+    .catch(err => res.send(err))
   }
 }
 
